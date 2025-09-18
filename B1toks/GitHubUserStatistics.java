@@ -3,13 +3,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-
 public class GitHubUserStatistics {
     public final static String USER_NAME;
 
-
     public static void main(String[] args) {
-        String apiUrl = "https://api.github.com/users/";
+        String apiUrl = "https://api.github.com/users/" + USER_NAME;
         try {
             @SuppressWarnings("deprecation")
             URL url = new URL(apiUrl);
@@ -17,12 +15,10 @@ public class GitHubUserStatistics {
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Accept", "application/vnd.github.v3+json");
 
-
             if (conn.getResponseCode() != 200) {
                 System.out.println("Failed : HTTP error code : " + conn.getResponseCode());
                 return;
             }
-
 
             BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
             StringBuilder sb = new StringBuilder();
@@ -32,14 +28,12 @@ public class GitHubUserStatistics {
             }
             conn.disconnect();
 
-
             String json = sb.toString();
             printStatistics(json);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
 
     private static void printStatistics(String json) {
         // Simple extraction using regex (for demonstration, not robust)
@@ -49,7 +43,6 @@ public class GitHubUserStatistics {
         String following = extractValue(json, "following");
         String createdAt = extractValue(json, "created_at");
 
-
         System.out.println("GitHub User Statistics:");
         System.out.println("Name: " + name);
         System.out.println("Public Repos: " + publicRepos);
@@ -58,9 +51,8 @@ public class GitHubUserStatistics {
         System.out.println("Account Created At: " + createdAt);
     }
 
-
     private static String extractValue(String json, String key) {
-    String pattern = "\\\"" + key + "\\\":(\\\".*?\\\"|\\d+)";
+        String pattern = "\\\"" + key + "\\\":(\\\".*?\\\"|\\d+)";
         java.util.regex.Pattern r = java.util.regex.Pattern.compile(pattern);
         java.util.regex.Matcher m = r.matcher(json);
         if (m.find()) {
