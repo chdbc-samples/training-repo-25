@@ -4,7 +4,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class GitHubUserStatistics {
-    public final static String USER_NAME;
+    public final static String USER_NAME = "B1toks";
 
     public static void main(String[] args) {
         String apiUrl = "https://api.github.com/users/" + USER_NAME;
@@ -14,7 +14,7 @@ public class GitHubUserStatistics {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Accept", "application/vnd.github.v3+json");
-
+int responseCode = conn.getResponseCode();
             if (conn.getResponseCode() != 200) {
                 System.out.println("Failed : HTTP error code : " + conn.getResponseCode());
                 return;
