@@ -4,6 +4,8 @@ danchikson
 dmytro-ndp
 lame-over
 xlspring
+Maksim2211
+DenisPrimeUltraFullHD
 Motaylenko
 Maksim2211
 dimon289
