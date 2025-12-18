@@ -1,0 +1,15 @@
+*   [33mef2f309[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge branch 'fix'
+[31m|[m[32m\[m  
+[31m|[m * [33me1b09b9[m[33m ([m[1;31morigin/fix[m[33m, [m[1;32mfix[m[33m)[m Fix apiUrl error in MatviiYatsenko1/GitHubUserStatistics.java
+[31m|[m * [33m2901536[m Add Matviiyatsenko1/GitHubUserStatistics.java
+[31m|[m * [33m6d89a58[m Add MatviiYatsenko1/GitHubUserStatistics.java
+* [32m|[m [33mb2f54ae[m 1111
+[32m|[m[32m/[m  
+*   [33mf60db63[m Merge pull request #1 from dmytro-ndp/main
+[33m|[m[34m\[m  
+[33m|[m * [33m9a5707a[m Add dmytro-ndp to README.md
+[33m|[m * [33m33708b9[m Fix USER_NAME error in dmytro-ndp/GitHubUserStatistics.java
+[33m|[m * [33m4698a33[m Fix apiUrl error in dmytro-ndp/GitHubUserStatistics.java
+[33m|[m * [33m5ae6bd9[m Add dmytro-ndp/GitHubUserStatistics.java
+[33m|[m[33m/[m  
+* [33mbd97af3[m Initial commit
