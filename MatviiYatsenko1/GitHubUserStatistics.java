@@ -4,8 +4,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 
-public class GitHubUserStatistics {
-    public final static String USER_NAME;
+    public final static String USER_NAME = "MatviiYatsenko1";
+
+
+            String apiUrl = "https://api.github.com/users/" + USER_NAME;
+
+
 
 
     public static void main(String[] args) {
